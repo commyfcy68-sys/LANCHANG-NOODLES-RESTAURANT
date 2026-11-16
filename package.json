@@ -1,0 +1,13 @@
+{
+  "name": "lanchan-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --names API,ORDER,STAFF \"npm --prefix login-api run dev\" \"npm --prefix lanchan-order start\" \"cross-env PORT=3001 npm --prefix lanchang-login start\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.9"
+  }
+}
